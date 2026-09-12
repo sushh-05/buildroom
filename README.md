@@ -36,7 +36,7 @@ These are not screenshots or mockups - they are functioning React components wit
 - **ESLint** : linting
 - **CSS custom properties** : full light/dark theme system with a persistent toggle (`localStorage`-backed, respects `prefers-color-scheme` on first load)
 
-No backend, authentication, payment flow, or database is used — per the brief, all such interactions are mocked. The application form is explicitly labeled to the user as a mocked submission.
+No backend, authentication, payment flow, or database is used - per the brief, all such interactions are mocked. The application form is explicitly labeled to the user as a mocked submission.
 
 ---
 
@@ -87,8 +87,8 @@ src/
 - **Real computed logic in every demo**, not hardcoded labels:
   - Recover: overdue status is derived from comparing the stored due date to the current date, not a static tag.
   - Navigate: the "best" alternative is computed with a weighted formula (60% price, 40% directness), so the ranking changes if the underlying data changes.
-  - Forecast: days-until-stockout is calculated from the average of each product's 6-week sales history, and the bar chart heights are generated from that same array — the visual and the number are mathematically linked.
-- **Data/type separation.** Mission content, FAQ content, and seed data live in `src/data/` and `src/types/`, so content changes don't require touching component logic — a deliberate maintainability choice.
+  - Forecast: days-until-stockout is calculated from the average of each product's 6-week sales history, and the bar chart heights are generated from that same array - the visual and the number are mathematically linked.
+- **Data/type separation.** Mission content, FAQ content, and seed data live in `src/data/` and `src/types/`, so content changes don't require touching component logic - a deliberate maintainability choice.
 - **Accessibility as a first-class requirement**, not an afterthought: semantic headings, `aria-expanded`/`aria-controls` on the FAQ accordion, a labeled `role="dialog"` modal, visible focus outlines, 44px-minimum touch targets, and `prefers-reduced-motion` support on all animations.
 - **Honest mocking.** The application form explicitly tells the user its submission is mocked for the assessment, rather than presenting fake success messaging that implies a real backend exists.
 
