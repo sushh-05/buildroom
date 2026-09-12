@@ -23,25 +23,25 @@ export function Proof() {
             <div className="mx-auto max-w-6xl px-6">
                 <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
                     <div>
-                        <p className="mb-3 font-mono text-xs font-semibold uppercase tracking-[0.2em] text-[#d9522b]">
+                        <p className="mb-3 font-mono text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-accent)]">
                             Proof, not certificates
                         </p>
                         <h2 className="max-w-md text-3xl font-black leading-tight tracking-[-0.02em] sm:text-4xl">
                             You leave with things people can actually check.
                         </h2>
-                        <p className="mt-5 max-w-sm leading-7 text-[#5c5a50]">
+                        <p className="mt-5 max-w-sm leading-7 text-[var(--color-text-muted)]">
                             No completion badge. No participation certificate. Just a
                             working product with your name on the commits.
                         </p>
                     </div>
 
-                    <ul className="divide-y divide-[#171713]/10 border-y border-[#171713]/10">
+                    <ul className="divide-y divide-[var(--color-border)] border-y border-[var(--color-border)]">
                         {artifacts.map((item) => (
                             <li key={item.label} className="grid gap-1 py-6 sm:grid-cols-[1fr_1.6fr] sm:gap-8">
                                 <span className="text-base font-bold tracking-[-0.01em]">
                                     {item.label}
                                 </span>
-                                <span className="leading-6 text-[#5c5a50]">{item.detail}</span>
+                                <span className="leading-6 text-[var(--color-text-muted)]">{item.detail}</span>
                             </li>
                         ))}
                     </ul>

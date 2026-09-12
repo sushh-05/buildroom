@@ -23,7 +23,7 @@ function SparkBars({ data }: { data: number[] }) {
             {data.map((value, index) => (
                 <div
                     key={index}
-                    className="w-2.5 bg-[#3d9a5c]/60"
+                    className="w-2.5 bg-[var(--color-accent-forecast)]/60"
                     style={{ height: `${Math.max(8, (value / max) * 100)}%` }}
                 />
             ))}
@@ -56,14 +56,14 @@ export function ForecastDemo() {
     const lowStockCount = enriched.filter((item) => item.low).length;
 
     return (
-        <div className="mt-14 border-t border-[#171713]/10 pt-14">
-            <p className="mb-2 font-mono text-xs font-semibold uppercase tracking-[0.2em] text-[#3d9a5c]">
+        <div className="mt-14 border-t border-[var(--color-border)] pt-14">
+            <p className="mb-2 font-mono text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-accent-forecast)]">
                 Live preview
             </p>
             <h3 className="text-xl font-bold tracking-[-0.01em]">
                 A working slice of the Forecast mission
             </h3>
-            <p className="mt-2 max-w-lg leading-6 text-[#5c5a50]">
+            <p className="mt-2 max-w-lg leading-6 text-[var(--color-text-muted)]">
                 Days-until-stockout is calculated live from each product&apos;s
                 6-week sales trend — sorted with the most urgent item first.
             </p>
@@ -73,8 +73,8 @@ export function ForecastDemo() {
                     type="button"
                     onClick={() => setFilter("all")}
                     className={`min-h-9 px-3 text-xs font-semibold ${filter === "all"
-                            ? "bg-[#171713] text-white"
-                            : "border border-[#171713]/15 text-[#171713]/70"
+                        ? "bg-[var(--color-inverse-bg)] text-[var(--color-inverse-text)]"
+                        : "border border-[var(--color-border)] text-[var(--color-text)]/70"
                         }`}
                 >
                     All products ({enriched.length})
@@ -83,8 +83,8 @@ export function ForecastDemo() {
                     type="button"
                     onClick={() => setFilter("low")}
                     className={`min-h-9 px-3 text-xs font-semibold ${filter === "low"
-                            ? "bg-[#171713] text-white"
-                            : "border border-[#171713]/15 text-[#171713]/70"
+                        ? "bg-[var(--color-inverse-bg)] text-[var(--color-inverse-text)]"
+                        : "border border-[var(--color-border)] text-[var(--color-text)]/70"
                         }`}
                 >
                     Low stock only ({lowStockCount})
@@ -95,13 +95,13 @@ export function ForecastDemo() {
                 {visible.map(({ product, daysLeft, low }) => (
                     <div
                         key={product.id}
-                        className="flex flex-col gap-4 border border-[#171713]/10 bg-white p-4 sm:flex-row sm:items-center sm:justify-between"
+                        className="flex flex-col gap-4 border border-[var(--color-border)] bg-[var(--color-surface-card)] p-4 sm:flex-row sm:items-center sm:justify-between"
                     >
                         <div className="flex items-center gap-4">
                             <SparkBars data={product.weeklySales} />
                             <div>
                                 <p className="font-semibold">{product.name}</p>
-                                <p className="text-sm text-[#5c5a50]">
+                                <p className="text-sm text-[var(--color-text-muted)]">
                                     {product.stock} in stock · reorder at {product.reorderThreshold}
                                 </p>
                             </div>
@@ -109,15 +109,15 @@ export function ForecastDemo() {
 
                         <div className="flex items-center gap-3">
                             <span
-                                className={`text-sm font-semibold tabular-nums ${low ? "text-[#d9522b]" : "text-[#171713]/60"
+                                className={`text-sm font-semibold tabular-nums ${low ? "text-[var(--color-accent)]" : "text-[var(--color-text)]/60"
                                     }`}
                             >
                                 {Number.isFinite(daysLeft) ? `${daysLeft} days left` : "No demand"}
                             </span>
                             <span
                                 className={`px-2.5 py-1 text-xs font-semibold ${low
-                                        ? "bg-[#d9522b]/12 text-[#d9522b]"
-                                        : "bg-[#3d9a5c]/12 text-[#3d9a5c]"
+                                    ? "bg-[var(--color-accent)]/12 text-[var(--color-accent)]"
+                                    : "bg-[var(--color-accent-forecast)]/12 text-[var(--color-accent-forecast)]"
                                     }`}
                             >
                                 {low ? "Reorder soon" : "Healthy"}

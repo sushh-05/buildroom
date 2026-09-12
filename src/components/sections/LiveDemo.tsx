@@ -23,9 +23,9 @@ function draftReminder(invoice: Invoice): string {
 }
 
 const statusStyles: Record<InvoiceStatus, string> = {
-    Pending: "bg-[#171713]/8 text-[#171713]/70",
-    Overdue: "bg-[#d9522b]/12 text-[#d9522b]",
-    Paid: "bg-[#3d9a5c]/12 text-[#3d9a5c]",
+    Pending: "bg-[var(--color-text)]/8 text-[var(--color-text)]/70",
+    Overdue: "bg-[var(--color-accent)]/12 text-[var(--color-accent)]",
+    Paid: "bg-[var(--color-accent-forecast)]/12 text-[var(--color-accent-forecast)]",
 };
 
 export function LiveDemo() {
@@ -88,37 +88,37 @@ export function LiveDemo() {
     };
 
     return (
-        <div className="mt-14 border-t border-[#171713]/10 pt-14">
-            <p className="mb-2 font-mono text-xs font-semibold uppercase tracking-[0.2em] text-[#d9522b]">
+        <div className="mt-14 border-t border-[var(--color-border)] pt-14">
+            <p className="mb-2 font-mono text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-accent)]">
                 Live preview
             </p>
             <h3 className="text-xl font-bold tracking-[-0.01em]">
                 A working slice of the Recover mission
             </h3>
-            <p className="mt-2 max-w-lg leading-6 text-[#5c5a50]">
+            <p className="mt-2 max-w-lg leading-6 text-[var(--color-text-muted)]">
                 This is real, functioning code — add an invoice, mark one paid, or
                 draft a follow-up on an overdue account.
             </p>
 
             <div className="mt-8 grid gap-3 sm:grid-cols-3">
-                <div className="border border-[#171713]/10 bg-white p-4">
-                    <p className="text-xs font-semibold uppercase tracking-[0.08em] text-[#171713]/50">
+                <div className="border border-[var(--color-border)] bg-[var(--color-surface-card)] p-4">
+                    <p className="text-xs font-semibold uppercase tracking-[0.08em] text-[var(--color-text)]/50">
                         Outstanding
                     </p>
                     <p className="mt-1 text-2xl font-bold tabular-nums">
                         ₹{summary.outstanding.toLocaleString("en-IN")}
                     </p>
                 </div>
-                <div className="border border-[#171713]/10 bg-white p-4">
-                    <p className="text-xs font-semibold uppercase tracking-[0.08em] text-[#171713]/50">
+                <div className="border border-[var(--color-border)] bg-[var(--color-surface-card)] p-4">
+                    <p className="text-xs font-semibold uppercase tracking-[0.08em] text-[var(--color-text)]/50">
                         Overdue accounts
                     </p>
                     <p className="mt-1 text-2xl font-bold tabular-nums">
                         {summary.overdueCount}
                     </p>
                 </div>
-                <div className="border border-[#171713]/10 bg-white p-4">
-                    <p className="text-xs font-semibold uppercase tracking-[0.08em] text-[#171713]/50">
+                <div className="border border-[var(--color-border)] bg-[var(--color-surface-card)] p-4">
+                    <p className="text-xs font-semibold uppercase tracking-[0.08em] text-[var(--color-text)]/50">
                         Recovered
                     </p>
                     <p className="mt-1 text-2xl font-bold tabular-nums">
@@ -128,7 +128,7 @@ export function LiveDemo() {
             </div>
 
             <div className="mt-8 flex items-center justify-between">
-                <span className="text-xs font-semibold uppercase tracking-[0.08em] text-[#171713]/50">
+                <span className="text-xs font-semibold uppercase tracking-[0.08em] text-[var(--color-text)]/50">
                     Sort by
                 </span>
                 <div className="flex gap-2">
@@ -136,8 +136,8 @@ export function LiveDemo() {
                         type="button"
                         onClick={() => setSortKey("dueDate")}
                         className={`min-h-9 px-3 text-xs font-semibold ${sortKey === "dueDate"
-                                ? "bg-[#171713] text-white"
-                                : "border border-[#171713]/15 text-[#171713]/70"
+                            ? "bg-[var(--color-inverse-bg)] text-[var(--color-inverse-text)]"
+                            : "border border-[var(--color-border)] text-[var(--color-text)]/70"
                             }`}
                     >
                         Due date
@@ -146,8 +146,8 @@ export function LiveDemo() {
                         type="button"
                         onClick={() => setSortKey("amount")}
                         className={`min-h-9 px-3 text-xs font-semibold ${sortKey === "amount"
-                                ? "bg-[#171713] text-white"
-                                : "border border-[#171713]/15 text-[#171713]/70"
+                            ? "bg-[var(--color-inverse-bg)] text-[var(--color-inverse-text)]"
+                            : "border border-[var(--color-border)] text-[var(--color-text)]/70"
                             }`}
                     >
                         Amount
@@ -155,10 +155,10 @@ export function LiveDemo() {
                 </div>
             </div>
 
-            <div className="mt-4 overflow-x-auto border border-[#171713]/10">
+            <div className="mt-4 overflow-x-auto border border-[var(--color-border)]">
                 <table className="w-full min-w-[560px] border-collapse text-left text-sm">
                     <thead>
-                        <tr className="border-b border-[#171713]/10 bg-[#faf8f3]">
+                        <tr className="border-b border-[var(--color-border)] bg-[var(--color-surface)]">
                             <th className="px-4 py-3 font-semibold">Client</th>
                             <th className="px-4 py-3 font-semibold">Amount</th>
                             <th className="px-4 py-3 font-semibold">Due date</th>
@@ -173,13 +173,13 @@ export function LiveDemo() {
                                 <>
                                     <tr
                                         key={invoice.id}
-                                        className="border-b border-[#171713]/8 last:border-b-0"
+                                        className="border-b border-[var(--color-border)] last:border-b-0"
                                     >
                                         <td className="px-4 py-3 font-medium">{invoice.client}</td>
                                         <td className="px-4 py-3 tabular-nums">
                                             ₹{invoice.amount.toLocaleString("en-IN")}
                                         </td>
-                                        <td className="px-4 py-3 text-[#5c5a50]">
+                                        <td className="px-4 py-3 text-[var(--color-text-muted)]">
                                             {invoice.dueDate}
                                         </td>
                                         <td className="px-4 py-3">
@@ -200,7 +200,7 @@ export function LiveDemo() {
                                                             current === invoice.id ? null : invoice.id
                                                         )
                                                     }
-                                                    className="text-xs font-semibold text-[#d9522b] underline underline-offset-4"
+                                                    className="text-xs font-semibold text-[var(--color-accent)] underline underline-offset-4"
                                                 >
                                                     Draft follow-up
                                                 </button>
@@ -208,12 +208,12 @@ export function LiveDemo() {
                                         </td>
                                     </tr>
                                     {openReminderId === invoice.id && (
-                                        <tr className="border-b border-[#171713]/8 bg-[#faf8f3]">
+                                        <tr className="border-b border-[var(--color-border)] bg-[var(--color-surface)]">
                                             <td colSpan={5} className="px-4 py-4">
-                                                <p className="text-xs font-semibold uppercase tracking-[0.08em] text-[#171713]/50">
+                                                <p className="text-xs font-semibold uppercase tracking-[0.08em] text-[var(--color-text)]/50">
                                                     Generated follow-up message
                                                 </p>
-                                                <p className="mt-2 max-w-lg leading-6 text-[#171713]">
+                                                <p className="mt-2 max-w-lg leading-6 text-[var(--color-text)]">
                                                     {draftReminder(invoice)}
                                                 </p>
                                             </td>
@@ -241,7 +241,7 @@ export function LiveDemo() {
                         placeholder="Client name"
                         value={client}
                         onChange={(event) => setClient(event.target.value)}
-                        className="min-h-11 w-full border border-[#171713]/15 bg-white px-3 text-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#d9522b]"
+                        className="min-h-11 w-full border border-[var(--color-border)] bg-[var(--color-surface-card)] px-3 text-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-[var(--color-accent)]"
                     />
                 </div>
                 <div>
@@ -256,7 +256,7 @@ export function LiveDemo() {
                         placeholder="Amount (₹)"
                         value={amount}
                         onChange={(event) => setAmount(event.target.value)}
-                        className="min-h-11 w-full border border-[#171713]/15 bg-white px-3 text-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#d9522b]"
+                        className="min-h-11 w-full border border-[var(--color-border)] bg-[var(--color-surface-card)] px-3 text-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-[var(--color-accent)]"
                     />
                 </div>
                 <div>
@@ -269,12 +269,12 @@ export function LiveDemo() {
                         required
                         value={dueDate}
                         onChange={(event) => setDueDate(event.target.value)}
-                        className="min-h-11 w-full border border-[#171713]/15 bg-white px-3 text-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#d9522b]"
+                        className="min-h-11 w-full border border-[var(--color-border)] bg-[var(--color-surface-card)] px-3 text-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-[var(--color-accent)]"
                     />
                 </div>
                 <button
                     type="submit"
-                    className="min-h-11 bg-[#171713] px-4 text-sm font-semibold text-white"
+                    className="min-h-11 bg-[var(--color-inverse-bg)] px-4 text-sm font-semibold text-[var(--color-inverse-text)]"
                 >
                     Add invoice
                 </button>

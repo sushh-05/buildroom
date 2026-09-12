@@ -37,14 +37,14 @@ export function NavigateDemo() {
     };
 
     return (
-        <div className="mt-14 border-t border-[#171713]/10 pt-14">
-            <p className="mb-2 font-mono text-xs font-semibold uppercase tracking-[0.2em] text-[#2b6bd9]">
+        <div className="mt-14 border-t border-[var(--color-border)] pt-14">
+            <p className="mb-2 font-mono text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-accent-navigate)]">
                 Live preview
             </p>
             <h3 className="text-xl font-bold tracking-[-0.01em]">
                 A working slice of the Navigate mission
             </h3>
-            <p className="mt-2 max-w-lg leading-6 text-[#5c5a50]">
+            <p className="mt-2 max-w-lg leading-6 text-[var(--color-text-muted)]">
                 Alternatives are ranked live by a scoring rule that weighs price
                 against number of connections — expand a booking to see it work.
             </p>
@@ -55,7 +55,7 @@ export function NavigateDemo() {
                     const best = booking.alternatives[0];
 
                     return (
-                        <div key={booking.id} className="border border-[#171713]/10 bg-white">
+                        <div key={booking.id} className="border border-[var(--color-border)] bg-[var(--color-surface-card)]">
                             <button
                                 type="button"
                                 onClick={() =>
@@ -67,12 +67,12 @@ export function NavigateDemo() {
                             >
                                 <div>
                                     <p className="font-semibold">{booking.traveler}</p>
-                                    <p className="text-sm text-[#5c5a50]">
+                                    <p className="text-sm text-[var(--color-text-muted)]">
                                         {booking.originalRoute} · {booking.reason}
                                     </p>
                                 </div>
                                 <span
-                                    className={`flex-shrink-0 text-xs font-semibold ${booking.resolved ? "text-[#3d9a5c]" : "text-[#2b6bd9]"
+                                    className={`flex-shrink-0 text-xs font-semibold ${booking.resolved ? "text-[var(--color-accent-forecast)]" : "text-[var(--color-accent-navigate)]"
                                         }`}
                                 >
                                     {booking.resolved ? "Rebooked" : `Best: ₹${best.price.toLocaleString("en-IN")}`}
@@ -80,19 +80,19 @@ export function NavigateDemo() {
                             </button>
 
                             {isOpen && (
-                                <div className="border-t border-[#171713]/8 px-4 py-4">
+                                <div className="border-t border-[var(--color-border)] px-4 py-4">
                                     <ul className="space-y-2">
                                         {booking.alternatives.map((alt, index) => (
                                             <li
                                                 key={alt.id}
                                                 className={`flex flex-wrap items-center justify-between gap-3 border px-3 py-2.5 text-sm ${index === 0
-                                                        ? "border-[#2b6bd9]/30 bg-[#2b6bd9]/5"
-                                                        : "border-[#171713]/10"
+                                                    ? "border-[var(--color-accent-navigate)]/30 bg-[var(--color-accent-navigate)]/5"
+                                                    : "border-[var(--color-border)]"
                                                     }`}
                                             >
                                                 <div>
                                                     <p className="font-medium">{alt.route}</p>
-                                                    <p className="text-xs text-[#5c5a50]">
+                                                    <p className="text-xs text-[var(--color-text-muted)]">
                                                         Departs {alt.departure} ·{" "}
                                                         {alt.connections === 0 ? "Direct" : `${alt.connections} stop`}
                                                     </p>
@@ -105,7 +105,7 @@ export function NavigateDemo() {
                                                         <button
                                                             type="button"
                                                             onClick={() => rebook(booking.id)}
-                                                            className="min-h-8 bg-[#171713] px-3 text-xs font-semibold text-white"
+                                                            className="min-h-8 bg-[var(--color-inverse-bg)] px-3 text-xs font-semibold text-[var(--color-inverse-text)]"
                                                         >
                                                             Confirm rebooking
                                                         </button>

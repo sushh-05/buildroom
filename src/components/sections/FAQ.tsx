@@ -11,14 +11,14 @@ export function FAQ() {
     return (
         <section id="faq" className="py-20">
             <div className="mx-auto max-w-3xl px-6">
-                <p className="mb-3 font-mono text-xs font-semibold uppercase tracking-[0.2em] text-[#d9522b]">
+                <p className="mb-3 font-mono text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-accent)]">
                     Questions
                 </p>
                 <h2 className="text-3xl font-black leading-tight tracking-[-0.02em] sm:text-4xl">
                     Before you apply.
                 </h2>
 
-                <div className="mt-10 divide-y divide-[#171713]/10 border-y border-[#171713]/10">
+                <div className="mt-10 divide-y divide-[var(--color-border)] border-y border-[var(--color-border)]">
                     {faqItems.map((item) => {
                         const isOpen = openId === item.id;
                         const panelId = `faq-panel-${item.id}`;
@@ -33,12 +33,12 @@ export function FAQ() {
                                         aria-expanded={isOpen}
                                         aria-controls={panelId}
                                         onClick={() => toggle(item.id)}
-                                        className="flex min-h-11 w-full items-center justify-between gap-4 py-5 text-left text-base font-semibold text-[#171713]"
+                                        className="flex min-h-11 w-full items-center justify-between gap-4 py-5 text-left text-base font-semibold text-[var(--color-text)]"
                                     >
                                         {item.question}
                                         <span
                                             aria-hidden="true"
-                                            className={`flex-shrink-0 text-xl font-normal text-[#171713]/40 transition-transform ${isOpen ? "rotate-45" : ""
+                                            className={`flex-shrink-0 text-xl font-normal text-[var(--color-text)]/40 transition-transform ${isOpen ? "rotate-45" : ""
                                                 }`}
                                         >
                                             +
@@ -52,7 +52,7 @@ export function FAQ() {
                                     hidden={!isOpen}
                                     className="pb-5"
                                 >
-                                    <p className="max-w-xl leading-7 text-[#5c5a50]">
+                                    <p className="max-w-xl leading-7 text-[var(--color-text-muted)]">
                                         {item.answer}
                                     </p>
                                 </div>

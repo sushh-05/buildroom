@@ -18,14 +18,14 @@ export function ApplicationModal({ onClose }: ApplicationModalProps) {
 
     return (
         <div
-            className="fixed inset-0 z-50 grid place-items-center bg-[#171713]/50 p-6"
+            className="fixed inset-0 z-50 grid place-items-center bg-[var(--color-text)]/50 p-6"
             role="dialog"
             aria-modal="true"
             aria-labelledby="application-modal-title"
             onClick={onClose}
         >
             <div
-                className="w-full max-w-md bg-[#f3f0e8] p-8"
+                className="w-full max-w-md bg-[var(--color-bg)] p-8"
                 onClick={(event) => event.stopPropagation()}
             >
                 {submitted ? (
@@ -36,7 +36,7 @@ export function ApplicationModal({ onClose }: ApplicationModalProps) {
                         >
                             You&apos;re on the list.
                         </h2>
-                        <p className="mt-3 leading-6 text-[#5c5a50]">
+                        <p className="mt-3 leading-6 text-[var(--color-text-muted)]">
                             This is a mocked submission for the assessment — no data is
                             sent anywhere. In a real product, you&apos;d receive a
                             confirmation email next.
@@ -57,7 +57,7 @@ export function ApplicationModal({ onClose }: ApplicationModalProps) {
                         >
                             Find your first mission
                         </h2>
-                        <p className="mt-2 text-sm text-[#5c5a50]">
+                        <p className="mt-2 text-sm text-[var(--color-text-muted)]">
                             Applications are mocked for this assessment build.
                         </p>
 
@@ -72,7 +72,7 @@ export function ApplicationModal({ onClose }: ApplicationModalProps) {
                                     required
                                     value={name}
                                     onChange={(event) => setName(event.target.value)}
-                                    className="mt-1.5 min-h-11 w-full border border-[#171713]/15 bg-white px-3 text-base focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#d9522b]"
+                                    className="mt-1.5 min-h-11 w-full border border-[var(--color-border)] bg-[var(--color-surface-card)] px-3 text-base focus-visible:outline focus-visible:outline-2 focus-visible:outline-[var(--color-accent)]"
                                 />
                             </div>
 
@@ -86,7 +86,7 @@ export function ApplicationModal({ onClose }: ApplicationModalProps) {
                                     required
                                     value={email}
                                     onChange={(event) => setEmail(event.target.value)}
-                                    className="mt-1.5 min-h-11 w-full border border-[#171713]/15 bg-white px-3 text-base focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#d9522b]"
+                                    className="mt-1.5 min-h-11 w-full border border-[var(--color-border)] bg-[var(--color-surface-card)] px-3 text-base focus-visible:outline focus-visible:outline-2 focus-visible:outline-[var(--color-accent)]"
                                 />
                             </div>
 
@@ -98,7 +98,7 @@ export function ApplicationModal({ onClose }: ApplicationModalProps) {
                                     id="mission"
                                     value={mission}
                                     onChange={(event) => setMission(event.target.value)}
-                                    className="mt-1.5 min-h-11 w-full border border-[#171713]/15 bg-white px-3 text-base focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#d9522b]"
+                                    className="mt-1.5 min-h-11 w-full border border-[var(--color-border)] bg-[var(--color-surface-card)] px-3 text-base focus-visible:outline focus-visible:outline-2 focus-visible:outline-[var(--color-accent)]"
                                 >
                                     <option value="recover">M-01 · Recover</option>
                                     <option value="navigate">M-02 · Navigate</option>
@@ -114,7 +114,7 @@ export function ApplicationModal({ onClose }: ApplicationModalProps) {
                             <button
                                 type="button"
                                 onClick={onClose}
-                                className="text-sm font-semibold text-[#171713]/60 hover:text-[#171713]"
+                                className="text-sm font-semibold text-[var(--color-text)]/60 hover:text-[var(--color-text)]"
                             >
                                 Cancel
                             </button>

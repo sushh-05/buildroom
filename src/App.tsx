@@ -10,13 +10,19 @@ import { Mentors } from "./components/sections/Mentors";
 import { FAQ } from "./components/sections/FAQ";
 import { FinalCTA } from "./components/sections/FinalCTA";
 import { ApplicationModal } from "./components/ui/ApplicationModal";
+import { useTheme } from "./hooks/useTheme";
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   return (
-    <div className="min-h-screen bg-[#f3f0e8] text-[#171713]">
-      <Header onApplyClick={() => setIsModalOpen(true)} />
+    <div className="min-h-screen bg-[var(--color-bg)] text-[var(--color-text)]">
+      <Header
+        onApplyClick={() => setIsModalOpen(true)}
+        theme={theme}
+        onToggleTheme={toggleTheme}
+      />
       <main>
         <Hero onApplyClick={() => setIsModalOpen(true)} />
         <MissionExplorer />

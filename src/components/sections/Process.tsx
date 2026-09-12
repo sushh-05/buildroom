@@ -29,7 +29,7 @@ export function Process() {
     return (
         <section id="process" className="py-20">
             <div className="mx-auto max-w-6xl px-6">
-                <p className="mb-3 font-mono text-xs font-semibold uppercase tracking-[0.2em] text-[#d9522b]">
+                <p className="mb-3 font-mono text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-accent)]">
                     How it works
                 </p>
                 <h2 className="max-w-xl text-3xl font-black leading-tight tracking-[-0.02em] sm:text-4xl">
@@ -39,19 +39,19 @@ export function Process() {
                 <ol className="mt-14 grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
                     {steps.map((step, index) => (
                         <li key={step.number} className="relative">
-                            <span className="block font-mono text-sm font-semibold text-[#171713]/30">
+                            <span className="block font-mono text-sm font-semibold text-[var(--color-text)]/30">
                                 {step.number}
                             </span>
                             <h3 className="mt-3 text-xl font-bold tracking-[-0.01em]">
                                 {step.title}
                             </h3>
-                            <p className="mt-2 max-w-[26ch] leading-6 text-[#5c5a50]">
+                            <p className="mt-2 max-w-[26ch] leading-6 text-[var(--color-text-muted)]">
                                 {step.description}
                             </p>
                             {index < steps.length - 1 && (
                                 <span
                                     aria-hidden="true"
-                                    className="absolute right-[-1rem] top-1 hidden text-[#171713]/15 lg:block"
+                                    className="absolute right-[-1rem] top-1 hidden text-[var(--color-text)]/15 lg:block"
                                 >
                                     →
                                 </span>

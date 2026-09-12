@@ -11,10 +11,10 @@ export function MissionExplorer() {
     return (
         <section
             id="missions"
-            className="border-t border-[#171713]/8 bg-[#faf8f3] py-20"
+            className="border-t border-[var(--color-border)] bg-[var(--color-surface)] py-20"
         >
             <div className="mx-auto max-w-6xl px-6">
-                <p className="mb-3 font-mono text-xs font-semibold uppercase tracking-[0.2em] text-[#d9522b]">
+                <p className="mb-3 font-mono text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-accent)]">
                     Pick a mission
                 </p>
                 <h2 className="max-w-xl text-3xl font-black leading-tight tracking-[-0.02em] sm:text-4xl">
@@ -24,7 +24,7 @@ export function MissionExplorer() {
                 <div
                     role="tablist"
                     aria-label="Missions"
-                    className="mt-10 flex flex-wrap gap-2 border-b border-[#171713]/10"
+                    className="mt-10 flex flex-wrap gap-2 border-b border-[var(--color-border)]"
                 >
                     {missions.map((mission) => (
                         <button
@@ -33,8 +33,8 @@ export function MissionExplorer() {
                             aria-selected={activeId === mission.id}
                             onClick={() => setActiveId(mission.id)}
                             className={`min-h-11 px-5 py-3 text-sm font-semibold transition-colors ${activeId === mission.id
-                                ? "border-b-2 text-[#171713]"
-                                : "border-b-2 border-transparent text-[#171713]/50 hover:text-[#171713]"
+                                ? "border-b-2 text-[var(--color-text)]"
+                                : "border-b-2 border-transparent text-[var(--color-text)]/50 hover:text-[var(--color-text)]"
                                 }`}
                             style={
                                 activeId === mission.id
@@ -57,24 +57,24 @@ export function MissionExplorer() {
                             <h3 className="text-2xl font-bold tracking-[-0.01em]">
                                 {activeMission.tagline}
                             </h3>
-                            <p className="mt-4 max-w-md leading-7 text-[#5c5a50]">
+                            <p className="mt-4 max-w-md leading-7 text-[var(--color-text-muted)]">
                                 {activeMission.problem}
                             </p>
 
                             <dl className="mt-8 space-y-5">
                                 <div>
-                                    <dt className="text-xs font-semibold uppercase tracking-[0.1em] text-[#171713]/50">
+                                    <dt className="text-xs font-semibold uppercase tracking-[0.1em] text-[var(--color-text)]/50">
                                         You&apos;ll build
                                     </dt>
-                                    <dd className="mt-1 leading-7 text-[#171713]">
+                                    <dd className="mt-1 leading-7 text-[var(--color-text)]">
                                         {activeMission.build}
                                     </dd>
                                 </div>
                                 <div>
-                                    <dt className="text-xs font-semibold uppercase tracking-[0.1em] text-[#171713]/50">
+                                    <dt className="text-xs font-semibold uppercase tracking-[0.1em] text-[var(--color-text)]/50">
                                         Deployed outcome
                                     </dt>
-                                    <dd className="mt-1 leading-7 text-[#171713]">
+                                    <dd className="mt-1 leading-7 text-[var(--color-text)]">
                                         {activeMission.outcome}
                                     </dd>
                                 </div>
@@ -89,14 +89,14 @@ export function MissionExplorer() {
                             }}
                         >
                             <div>
-                                <p className="text-xs font-semibold uppercase tracking-[0.1em] text-[#171713]/50">
+                                <p className="text-xs font-semibold uppercase tracking-[0.1em] text-[var(--color-text)]/50">
                                     Skills you&apos;ll practice
                                 </p>
                                 <ul className="mt-4 space-y-3">
                                     {activeMission.skills.map((skill) => (
                                         <li
                                             key={skill}
-                                            className="flex items-center gap-3 text-sm font-medium text-[#171713]"
+                                            className="flex items-center gap-3 text-sm font-medium text-[var(--color-text)]"
                                         >
                                             <span
                                                 className="h-1.5 w-1.5 flex-shrink-0"
@@ -108,7 +108,7 @@ export function MissionExplorer() {
                                     ))}
                                 </ul>
                             </div>
-                            <p className="mt-8 font-mono text-xs text-[#171713]/40">
+                            <p className="mt-8 font-mono text-xs text-[var(--color-text)]/40">
                                 {activeMission.code} / {missions.length.toString().padStart(2, "0")}
                             </p>
                         </div>

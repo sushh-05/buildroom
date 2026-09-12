@@ -13,7 +13,7 @@ export function Logo({ className }: LogoProps) {
         >
             <rect x="2" y="18" width="7" height="12" fill="currentColor" />
             <rect x="12.5" y="10" width="7" height="20" fill="currentColor" />
-            <rect x="23" y="2" width="7" height="28" fill="#d9522b" />
+            <rect x="23" y="2" width="7" height="28" fill="var(--color-accent)" />
         </svg>
     );
 }
