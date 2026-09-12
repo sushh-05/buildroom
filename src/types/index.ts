@@ -15,3 +15,13 @@ export interface FaqItem {
     question: string;
     answer: string;
 }
+
+export type InvoiceStatus = "Pending" | "Overdue" | "Paid";
+
+export interface Invoice {
+    id: string;
+    client: string;
+    amount: number;
+    dueDate: string;
+    status: InvoiceStatus;
+}

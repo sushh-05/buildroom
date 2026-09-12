@@ -104,3 +104,12 @@ export const mentors: Mentor[] = [
             "Shipping something small and working beats a huge plan that never leaves your laptop.",
     },
 ];
+
+import type { Invoice } from "../types";
+
+export const seedInvoices: Invoice[] = [
+    { id: "inv-1", client: "Kavya Textiles", amount: 42000, dueDate: "2026-08-20", status: "Pending" },
+    { id: "inv-2", client: "Orbit Hardware", amount: 118500, dueDate: "2026-08-05", status: "Pending" },
+    { id: "inv-3", client: "Northwind Foods", amount: 27500, dueDate: "2026-09-01", status: "Pending" },
+    { id: "inv-4", client: "Vertex Auto Parts", amount: 63200, dueDate: "2026-07-28", status: "Paid" },
+];
