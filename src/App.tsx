@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Header } from "./components/layout/Header";
 import { Hero } from "./components/sections/Hero";
 import { MissionExplorer } from "./components/sections/MissionExplorer";
+import { Process } from "./components/sections/Process";
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -12,6 +13,7 @@ function App() {
       <main>
         <Hero onApplyClick={() => setIsModalOpen(true)} />
         <MissionExplorer />
+        <Process />
       </main>
       {isModalOpen && (
         <div className="fixed inset-0 z-50 grid place-items-center bg-black/40 p-6">
