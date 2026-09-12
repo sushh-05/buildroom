@@ -1,5 +1,6 @@
 import { useState, type FormEvent } from "react";
 import { Button } from "./Button";
+import { motion } from "motion/react";
 
 interface ApplicationModalProps {
     onClose: () => void;
@@ -17,16 +18,24 @@ export function ApplicationModal({ onClose }: ApplicationModalProps) {
     };
 
     return (
-        <div
-            className="fixed inset-0 z-50 grid place-items-center bg-[var(--color-text)]/50 p-6"
+        <motion.div
+            className="fixed inset-0 z-50 grid place-items-center bg-[var(--color-inverse-bg)]/50 p-6"
             role="dialog"
             aria-modal="true"
             aria-labelledby="application-modal-title"
             onClick={onClose}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
         >
-            <div
+            <motion.div
                 className="w-full max-w-md bg-[var(--color-bg)] p-8"
                 onClick={(event) => event.stopPropagation()}
+                initial={{ opacity: 0, scale: 0.96, y: 12 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.96, y: 12 }}
+                transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
             >
                 {submitted ? (
                     <div>
@@ -121,7 +130,7 @@ export function ApplicationModal({ onClose }: ApplicationModalProps) {
                         </div>
                     </form>
                 )}
-            </div>
-        </div>
+            </motion.div>
+        </motion.div>
     );
 }

@@ -1,3 +1,5 @@
+import { Reveal } from "../ui/Reveal";
+
 const artifacts = [
     {
         label: "Public GitHub repository",
@@ -20,7 +22,7 @@ const artifacts = [
 export function Proof() {
     return (
         <section className="py-20">
-            <div className="mx-auto max-w-6xl px-6">
+            <Reveal className="mx-auto max-w-6xl px-6">
                 <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
                     <div>
                         <p className="mb-3 font-mono text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-accent)]">
@@ -46,7 +48,7 @@ export function Proof() {
                         ))}
                     </ul>
                 </div>
-            </div>
+            </Reveal>
         </section>
     );
 }

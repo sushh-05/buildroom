@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { AnimatePresence } from "motion/react";
 import { Header } from "./components/layout/Header";
 import { Footer } from "./components/layout/Footer";
 import { Hero } from "./components/sections/Hero";
@@ -34,9 +35,11 @@ function App() {
         <FinalCTA onApplyClick={() => setIsModalOpen(true)} />
       </main>
       <Footer />
-      {isModalOpen && (
-        <ApplicationModal onClose={() => setIsModalOpen(false)} />
-      )}
+      <AnimatePresence>
+        {isModalOpen && (
+          <ApplicationModal onClose={() => setIsModalOpen(false)} />
+        )}
+      </AnimatePresence>
     </div>
   );
 }

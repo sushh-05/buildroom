@@ -1,9 +1,10 @@
 import { mentors } from "../../data/missions";
+import { Reveal } from "../ui/Reveal";
 
 export function Mentors() {
     return (
         <section className="border-t border-[var(--color-border)] bg-[var(--color-surface)] py-20">
-            <div className="mx-auto max-w-6xl px-6">
+            <Reveal className="mx-auto max-w-6xl px-6">
                 <p className="mb-3 font-mono text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-accent)]">
                     Who reviews your work
                 </p>
@@ -37,7 +38,7 @@ export function Mentors() {
                         </div>
                     ))}
                 </div>
-            </div>
+            </Reveal>
         </section>
     );
 }

@@ -1,4 +1,5 @@
 import { Button } from "../ui/Button";
+import { Reveal } from "../ui/Reveal";
 
 interface FinalCTAProps {
     onApplyClick: () => void;
@@ -7,7 +8,7 @@ interface FinalCTAProps {
 export function FinalCTA({ onApplyClick }: FinalCTAProps) {
     return (
         <section className="border-t border-[var(--color-border)] bg-[var(--color-inverse-bg)] py-20 text-[var(--color-inverse-text)]">
-            <div className="mx-auto max-w-6xl px-6 text-center">
+            <Reveal className="mx-auto max-w-6xl px-6 text-center">
                 <p className="mb-4 font-mono text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-accent)]">
                     Mission 00
                 </p>
@@ -23,7 +24,7 @@ export function FinalCTA({ onApplyClick }: FinalCTAProps) {
                         Find your first mission
                     </Button>
                 </div>
-            </div>
+            </Reveal>
         </section>
     );
 }

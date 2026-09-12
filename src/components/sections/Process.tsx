@@ -1,3 +1,5 @@
+import { Reveal } from "../ui/Reveal";
+
 const steps = [
     {
         number: "01",
@@ -28,7 +30,7 @@ const steps = [
 export function Process() {
     return (
         <section id="process" className="py-20">
-            <div className="mx-auto max-w-6xl px-6">
+            <Reveal className="mx-auto max-w-6xl px-6">
                 <p className="mb-3 font-mono text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-accent)]">
                     How it works
                 </p>
@@ -59,7 +61,7 @@ export function Process() {
                         </li>
                     ))}
                 </ol>
-            </div>
+            </Reveal>
         </section>
     );
 }

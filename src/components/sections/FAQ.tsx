@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { faqItems } from "../../data/faq";
+import { Reveal } from "../ui/Reveal";
+import { motion, AnimatePresence } from "motion/react";
 
 export function FAQ() {
     const [openId, setOpenId] = useState<string | null>(faqItems[0].id);
@@ -10,7 +12,7 @@ export function FAQ() {
 
     return (
         <section id="faq" className="py-20">
-            <div className="mx-auto max-w-3xl px-6">
+            <Reveal className="mx-auto max-w-3xl px-6">
                 <p className="mb-3 font-mono text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-accent)]">
                     Questions
                 </p>
@@ -45,22 +47,29 @@ export function FAQ() {
                                         </span>
                                     </button>
                                 </h3>
-                                <div
-                                    id={panelId}
-                                    role="region"
-                                    aria-labelledby={buttonId}
-                                    hidden={!isOpen}
-                                    className="pb-5"
-                                >
-                                    <p className="max-w-xl leading-7 text-[var(--color-text-muted)]">
-                                        {item.answer}
-                                    </p>
-                                </div>
+                                <AnimatePresence initial={false}>
+                                    {isOpen && (
+                                        <motion.div
+                                            id={panelId}
+                                            role="region"
+                                            aria-labelledby={buttonId}
+                                            initial={{ height: 0, opacity: 0 }}
+                                            animate={{ height: "auto", opacity: 1 }}
+                                            exit={{ height: 0, opacity: 0 }}
+                                            transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
+                                            className="overflow-hidden"
+                                        >
+                                            <p className="max-w-xl pb-5 leading-7 text-[var(--color-text-muted)]">
+                                                {item.answer}
+                                            </p>
+                                        </motion.div>
+                                    )}
+                                </AnimatePresence>
                             </div>
                         );
                     })}
                 </div>
-            </div>
+            </Reveal>
         </section>
     );
 }
