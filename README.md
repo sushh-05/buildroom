@@ -2,16 +2,16 @@
 
 **Don't just learn AI. Build something useful.**
 
-Buildroom is a fictional EdTech platform. It reimagines online AI/tech education around **shipped proof of work** instead of course completion — students join a four-week build sprint, solve one realistic business mission, and leave with a deployed project and a public GitHub history instead of a certificate.
+Buildroom is a fictional EdTech platform. It reimagines online AI/tech education around **shipped proof of work** instead of course completion - students join a four-week build sprint, solve one realistic business mission, and leave with a deployed project and a public GitHub history instead of a certificate.
 
-**Live app:** _[add your Netlify URL here before submitting]_
-**Source code:** _[add your GitHub repo URL here before submitting]_
+**Live app:** https://melodious-chimera-d15da6.netlify.app/
+**Source code:** https://github.com/sushh-05/buildroom
 
 ---
 
 ## Overview
 
-The product brief asked for an original EdTech identity benchmarked against [Outskill](https://www.outskill.com) for visual polish, but not cloned from it. Buildroom's differentiator is a specific point of view: **project evidence over course completion**. Every section on the page reinforces that one idea — most notably the **Mission Explorer**, which lets a visitor pick one of three realistic missions and interact with a genuinely working, embedded preview of what a student would build in that mission.
+The product brief asked for an original EdTech identity benchmarked against [Outskill](https://www.outskill.com) for visual polish, but not cloned from it. Buildroom's differentiator is a specific point of view: **project evidence over course completion**. Every section on the page reinforces that one idea - most notably the **Mission Explorer**, which lets a visitor pick one of three realistic missions and interact with a genuinely working, embedded preview of what a student would build in that mission.
 
 ### The three missions
 
@@ -21,19 +21,19 @@ The product brief asked for an original EdTech identity benchmarked against [Out
 | **Navigate** | Disrupted travel bookings force manual itinerary rebuilding | A rebooking copilot that ranks alternative itineraries live using a weighted price/directness scoring formula, and lets you confirm a rebooking |
 | **Forecast** | Retailers restock by instinct, causing stockouts or overstock | An inventory monitor that calculates real days-until-stockout from a 6-week sales trend per product, with a live SVG bar chart and low-stock filtering |
 
-These are not screenshots or mockups — they are functioning React components with real state, real derived calculations, and real user interaction, built to prove the platform's promise rather than just describe it.
+These are not screenshots or mockups - they are functioning React components with real state, real derived calculations, and real user interaction, built to prove the platform's promise rather than just describe it.
 
 ---
 
 ## Tech stack
 
-- **React 19 + TypeScript** — component structure and type safety
-- **Vite** — build tooling and dev server
-- **Tailwind CSS v4** — styling, using the official Vite plugin (no legacy `tailwind.config.js`/PostCSS setup needed)
-- **motion** (successor to Framer Motion) — scroll reveals, hero entrance stagger, animated tab transitions, animated accordion, animated modal
-- **lucide-react** — icon set (used sparingly, not as decorative circle-icons)
-- **ESLint** — linting
-- **CSS custom properties** — full light/dark theme system with a persistent toggle (`localStorage`-backed, respects `prefers-color-scheme` on first load)
+- **React 19 + TypeScript** : component structure and type safety
+- **Vite** : build tooling and dev server
+- **Tailwind CSS v4** : styling, using the official Vite plugin (no legacy `tailwind.config.js`/PostCSS setup needed)
+- **motion** (successor to Framer Motion) : scroll reveals, hero entrance stagger, animated tab transitions, animated accordion, animated modal
+- **lucide-react** : icon set (used sparingly, not as decorative circle-icons)
+- **ESLint** : linting
+- **CSS custom properties** : full light/dark theme system with a persistent toggle (`localStorage`-backed, respects `prefers-color-scheme` on first load)
 
 No backend, authentication, payment flow, or database is used — per the brief, all such interactions are mocked. The application form is explicitly labeled to the user as a mocked submission.
 
