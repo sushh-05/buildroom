@@ -18,7 +18,7 @@ The product brief asked for an original EdTech identity benchmarked against [Out
 
 | Mission | Real-world problem | What the live preview does |
 |---|---|---|
-| **Recover** | Small businesses lose weeks chasing overdue invoices | A working invoice board — add invoices, toggle paid/pending, auto-flags overdue accounts by date, computes live totals, and generates a rule-based follow-up message |
+| **Recover** | Small businesses lose weeks chasing overdue invoices | A working invoice board - add invoices, toggle paid/pending, auto-flags overdue accounts by date, computes live totals, and generates a rule-based follow-up message |
 | **Navigate** | Disrupted travel bookings force manual itinerary rebuilding | A rebooking copilot that ranks alternative itineraries live using a weighted price/directness scoring formula, and lets you confirm a rebooking |
 | **Forecast** | Retailers restock by instinct, causing stockouts or overstock | An inventory monitor that calculates real days-until-stockout from a 6-week sales trend per product, with a live SVG bar chart and low-stock filtering |
 
