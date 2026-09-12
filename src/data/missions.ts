@@ -73,3 +73,34 @@ export const sprintWeeks: SprintWeek[] = [
         deliverable: "Final deployment, README write-up, and a recorded walkthrough of your decisions.",
     },
 ];
+
+export interface Mentor {
+    name: string;
+    role: string;
+    focus: string;
+    quote: string;
+}
+
+export const mentors: Mentor[] = [
+    {
+        name: "Ananya Rao",
+        role: "Backend engineer, fintech",
+        focus: "Reviews API design and data modeling decisions.",
+        quote:
+            "I care less about whether it works and more about whether you can explain why you built it that way.",
+    },
+    {
+        name: "Devika Menon",
+        role: "Frontend engineer, product studio",
+        focus: "Reviews component structure, accessibility, and UI polish.",
+        quote:
+            "The gap between a good project and a great one is almost always in the details nobody asked for.",
+    },
+    {
+        name: "Rohit Iyer",
+        role: "Full-stack engineer, early-stage startups",
+        focus: "Reviews deployment, performance, and scoping decisions.",
+        quote:
+            "Shipping something small and working beats a huge plan that never leaves your laptop.",
+    },
+];

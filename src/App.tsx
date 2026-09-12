@@ -5,6 +5,7 @@ import { MissionExplorer } from "./components/sections/MissionExplorer";
 import { Process } from "./components/sections/Process";
 import { SprintTimeline } from "./components/sections/SprintTimeline";
 import { Proof } from "./components/sections/Proof";
+import { Mentors } from "./components/sections/Mentors";
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -18,6 +19,7 @@ function App() {
         <Process />
         <SprintTimeline />
         <Proof />
+        <Mentors />
       </main>
       {isModalOpen && (
         <div className="fixed inset-0 z-50 grid place-items-center bg-black/40 p-6">
