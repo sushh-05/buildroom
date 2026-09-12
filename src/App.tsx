@@ -6,6 +6,7 @@ import { Process } from "./components/sections/Process";
 import { SprintTimeline } from "./components/sections/SprintTimeline";
 import { Proof } from "./components/sections/Proof";
 import { Mentors } from "./components/sections/Mentors";
+import { FAQ } from "./components/sections/FAQ";
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -20,6 +21,7 @@ function App() {
         <SprintTimeline />
         <Proof />
         <Mentors />
+        <FAQ />
       </main>
       {isModalOpen && (
         <div className="fixed inset-0 z-50 grid place-items-center bg-black/40 p-6">

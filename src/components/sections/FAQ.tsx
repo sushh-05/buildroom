@@ -1,7 +1,66 @@
-export const FAQ = () => {
+import { useState } from "react";
+import { faqItems } from "../../data/faq";
+
+export function FAQ() {
+    const [openId, setOpenId] = useState<string | null>(faqItems[0].id);
+
+    const toggle = (id: string) => {
+        setOpenId((current) => (current === id ? null : id));
+    };
+
     return (
-        <section>
-            FAQ
+        <section id="faq" className="py-20">
+            <div className="mx-auto max-w-3xl px-6">
+                <p className="mb-3 font-mono text-xs font-semibold uppercase tracking-[0.2em] text-[#d9522b]">
+                    Questions
+                </p>
+                <h2 className="text-3xl font-black leading-tight tracking-[-0.02em] sm:text-4xl">
+                    Before you apply.
+                </h2>
+
+                <div className="mt-10 divide-y divide-[#171713]/10 border-y border-[#171713]/10">
+                    {faqItems.map((item) => {
+                        const isOpen = openId === item.id;
+                        const panelId = `faq-panel-${item.id}`;
+                        const buttonId = `faq-button-${item.id}`;
+
+                        return (
+                            <div key={item.id}>
+                                <h3>
+                                    <button
+                                        id={buttonId}
+                                        type="button"
+                                        aria-expanded={isOpen}
+                                        aria-controls={panelId}
+                                        onClick={() => toggle(item.id)}
+                                        className="flex min-h-11 w-full items-center justify-between gap-4 py-5 text-left text-base font-semibold text-[#171713]"
+                                    >
+                                        {item.question}
+                                        <span
+                                            aria-hidden="true"
+                                            className={`flex-shrink-0 text-xl font-normal text-[#171713]/40 transition-transform ${isOpen ? "rotate-45" : ""
+                                                }`}
+                                        >
+                                            +
+                                        </span>
+                                    </button>
+                                </h3>
+                                <div
+                                    id={panelId}
+                                    role="region"
+                                    aria-labelledby={buttonId}
+                                    hidden={!isOpen}
+                                    className="pb-5"
+                                >
+                                    <p className="max-w-xl leading-7 text-[#5c5a50]">
+                                        {item.answer}
+                                    </p>
+                                </div>
+                            </div>
+                        );
+                    })}
+                </div>
+            </div>
         </section>
     );
-};
+}
