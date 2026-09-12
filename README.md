@@ -5,6 +5,7 @@
 Buildroom is a fictional EdTech platform. It reimagines online AI/tech education around **shipped proof of work** instead of course completion - students join a four-week build sprint, solve one realistic business mission, and leave with a deployed project and a public GitHub history instead of a certificate.
 
 **Live app:** https://melodious-chimera-d15da6.netlify.app/
+
 **Source code:** https://github.com/sushh-05/buildroom
 
 ---
