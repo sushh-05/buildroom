@@ -3,6 +3,7 @@ import { Header } from "./components/layout/Header";
 import { Hero } from "./components/sections/Hero";
 import { MissionExplorer } from "./components/sections/MissionExplorer";
 import { Process } from "./components/sections/Process";
+import { SprintTimeline } from "./components/sections/SprintTimeline";
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -14,6 +15,7 @@ function App() {
         <Hero onApplyClick={() => setIsModalOpen(true)} />
         <MissionExplorer />
         <Process />
+        <SprintTimeline />
       </main>
       {isModalOpen && (
         <div className="fixed inset-0 z-50 grid place-items-center bg-black/40 p-6">

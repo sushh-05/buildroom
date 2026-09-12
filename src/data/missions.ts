@@ -44,3 +44,32 @@ export const missions: Mission[] = [
         accent: "#3d9a5c",
     },
 ];
+
+export interface SprintWeek {
+    week: string;
+    title: string;
+    deliverable: string;
+}
+
+export const sprintWeeks: SprintWeek[] = [
+    {
+        week: "Week 1",
+        title: "Scope the problem",
+        deliverable: "A written product brief and a working project scaffold, deployed once, even if empty.",
+    },
+    {
+        week: "Week 2",
+        title: "Build the core flow",
+        deliverable: "The primary user journey works end-to-end, using mocked data where needed.",
+    },
+    {
+        week: "Week 3",
+        title: "Refine and review",
+        deliverable: "Mentor code review, UI polish pass, and fixes to rough edges found during testing.",
+    },
+    {
+        week: "Week 4",
+        title: "Ship and present",
+        deliverable: "Final deployment, README write-up, and a recorded walkthrough of your decisions.",
+    },
+];
