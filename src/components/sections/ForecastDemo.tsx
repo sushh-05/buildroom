@@ -65,7 +65,7 @@ export function ForecastDemo() {
             </h3>
             <p className="mt-2 max-w-lg leading-6 text-[var(--color-text-muted)]">
                 Days-until-stockout is calculated live from each product&apos;s
-                6-week sales trend — sorted with the most urgent item first.
+                6-week sales trend - sorted with the most urgent item first.
             </p>
 
             <div className="mt-6 flex gap-2">

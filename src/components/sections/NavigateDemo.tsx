@@ -46,7 +46,7 @@ export function NavigateDemo() {
             </h3>
             <p className="mt-2 max-w-lg leading-6 text-[var(--color-text-muted)]">
                 Alternatives are ranked live by a scoring rule that weighs price
-                against number of connections — expand a booking to see it work.
+                against number of connections - expand a booking to see it work.
             </p>
 
             <div className="mt-8 space-y-3">

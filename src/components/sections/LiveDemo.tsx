@@ -96,7 +96,7 @@ export function LiveDemo() {
                 A working slice of the Recover mission
             </h3>
             <p className="mt-2 max-w-lg leading-6 text-[var(--color-text-muted)]">
-                This is real, functioning code — add an invoice, mark one paid, or
+                This is real, functioning code - add an invoice, mark one paid, or
                 draft a follow-up on an overdue account.
             </p>
 

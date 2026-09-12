@@ -43,7 +43,7 @@ export function Hero({ onApplyClick }: HeroProps) {
                 className="mt-7 max-w-lg text-lg leading-8 text-[var(--color-text-muted)]"
             >
                 A four-week build sprint where you solve one realistic business
-                mission, ship a deployed project, and leave with proof — not another
+                mission, ship a deployed project, and leave with proof - not another
                 certificate.
             </motion.p>
 

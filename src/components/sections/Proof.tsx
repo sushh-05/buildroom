@@ -7,7 +7,7 @@ const artifacts = [
     },
     {
         label: "Live deployed product",
-        detail: "A real, working URL you can open on any device — not a screenshot or a local demo.",
+        detail: "A real, working URL you can open on any device, not a screenshot or a local demo.",
     },
     {
         label: "Architecture note",

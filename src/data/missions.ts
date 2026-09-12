@@ -133,7 +133,7 @@ export const disruptedBookings: DisruptedBooking[] = [
         id: "bk-2",
         traveler: "Arjun Kapoor",
         originalRoute: "DEL → SIN, 09:00",
-        reason: "Aircraft swap — schedule shifted 6 hours",
+        reason: "Aircraft swap - schedule shifted 6 hours",
         resolved: false,
         alternatives: [
             { id: "alt-4", route: "DEL → SIN direct", departure: "11:30", price: 21200, connections: 0, rank: 0 },

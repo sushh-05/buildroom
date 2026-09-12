@@ -5,7 +5,7 @@ const steps = [
         number: "01",
         title: "Brief",
         description:
-            "You receive a real business problem, not a vague topic — the same way a client would hand it to you.",
+            "You receive a real business problem, not a vague topic , the same way a client would hand it to you.",
     },
     {
         number: "02",
