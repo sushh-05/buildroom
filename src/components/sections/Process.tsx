@@ -38,22 +38,22 @@ export function Process() {
                     One mission, four stages, four weeks.
                 </h2>
 
-                <ol className="mt-14 grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
+                <ol className="mt-14 flex list-none flex-col gap-10 p-0 sm:grid sm:grid-cols-2 sm:gap-x-8 sm:gap-y-12 lg:grid-cols-4">
                     {steps.map((step, index) => (
                         <li key={step.number} className="relative">
-                            <span className="block font-mono text-sm font-semibold text-[var(--color-text)]/30">
+                            <span className="block font-mono text-sm font-semibold text-[var(--color-text-muted)]/60">
                                 {step.number}
                             </span>
                             <h3 className="mt-3 text-xl font-bold tracking-[-0.01em]">
                                 {step.title}
                             </h3>
-                            <p className="mt-2 max-w-[26ch] leading-6 text-[var(--color-text-muted)]">
+                            <p className="mt-2 max-w-[32ch] leading-6 text-[var(--color-text-muted)] sm:max-w-[26ch]">
                                 {step.description}
                             </p>
                             {index < steps.length - 1 && (
                                 <span
                                     aria-hidden="true"
-                                    className="absolute right-[-1rem] top-1 hidden text-[var(--color-text)]/15 lg:block"
+                                    className="absolute right-[-1rem] top-1 hidden text-[var(--color-text-muted)]/40 lg:block"
                                 >
                                     →
                                 </span>

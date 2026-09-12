@@ -16,7 +16,7 @@ export function SprintTimeline() {
                     {sprintWeeks.map((item, index) => (
                         <div
                             key={item.week}
-                            className="grid grid-cols-[auto_1fr] gap-x-6 border-t border-[var(--color-border)] py-6 first:border-t-0 sm:grid-cols-[140px_1fr_1.4fr] sm:gap-x-10"
+                            className="grid grid-cols-1 gap-x-6 border-t border-[var(--color-border)] py-6 first:border-t-0 sm:grid-cols-[140px_1fr_1.4fr] sm:gap-x-10"
                         >
                             <span className="font-mono text-xs font-semibold uppercase tracking-[0.1em] text-[var(--color-text)]/40">
                                 {item.week}

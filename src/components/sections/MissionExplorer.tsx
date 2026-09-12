@@ -25,7 +25,7 @@ export function MissionExplorer() {
                 <div
                     role="tablist"
                     aria-label="Missions"
-                    className="mt-10 flex flex-wrap gap-2 border-b border-[var(--color-border)]"
+                    className="mt-10 flex border-b border-[var(--color-border)]"
                 >
                     {missions.map((mission) => (
                         <button
@@ -33,9 +33,9 @@ export function MissionExplorer() {
                             role="tab"
                             aria-selected={activeId === mission.id}
                             onClick={() => setActiveId(mission.id)}
-                            className={`min-h-11 px-5 py-3 text-sm font-semibold transition-colors ${activeId === mission.id
-                                ? "border-b-2 text-[var(--color-text)]"
-                                : "border-b-2 border-transparent text-[var(--color-text)]/50 hover:text-[var(--color-text)]"
+                            className={`flex min-h-11 flex-1 flex-col items-center gap-0.5 border-b-2 px-1 py-3 text-center transition-colors sm:flex-none sm:flex-row sm:gap-1 sm:px-5 ${activeId === mission.id
+                                ? "text-[var(--color-text)]"
+                                : "border-transparent text-[var(--color-text-muted)] hover:text-[var(--color-text)]"
                                 }`}
                             style={
                                 activeId === mission.id
@@ -43,7 +43,13 @@ export function MissionExplorer() {
                                     : undefined
                             }
                         >
-                            {mission.code} · {mission.title}
+                            <span className="text-xs font-semibold sm:text-sm">{mission.code}</span>
+                            <span className="text-[10px] leading-tight sm:hidden">
+                                {mission.title}
+                            </span>
+                            <span className="hidden sm:inline sm:text-sm sm:font-semibold">
+                                · {mission.title}
+                            </span>
                         </button>
                     ))}
                 </div>
