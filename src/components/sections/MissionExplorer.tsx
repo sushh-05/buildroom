@@ -2,6 +2,7 @@ import { useState } from "react";
 import { missions } from "../../data/missions";
 import { LiveDemo } from "./LiveDemo";
 import { NavigateDemo } from "./NavigateDemo";
+import { ForecastDemo } from "./ForecastDemo";
 
 export function MissionExplorer() {
     const [activeId, setActiveId] = useState(missions[0].id);
@@ -115,6 +116,7 @@ export function MissionExplorer() {
 
                     {activeMission.id === "recover" && <LiveDemo />}
                     {activeMission.id === "navigate" && <NavigateDemo />}
+                    {activeMission.id === "forecast" && <ForecastDemo />}
                 </div>
             </div>
         </section>

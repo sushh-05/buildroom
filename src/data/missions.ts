@@ -141,3 +141,12 @@ export const disruptedBookings: DisruptedBooking[] = [
         ],
     },
 ];
+
+import type { Product } from "../types";
+
+export const products: Product[] = [
+    { id: "p-1", name: "Wireless Earbuds Pro", stock: 42, reorderThreshold: 20, weeklySales: [18, 22, 25, 30, 28, 34] },
+    { id: "p-2", name: "Ceramic Travel Mug", stock: 96, reorderThreshold: 30, weeklySales: [10, 9, 11, 8, 10, 9] },
+    { id: "p-3", name: "Desk Lamp Mini", stock: 15, reorderThreshold: 25, weeklySales: [12, 14, 16, 15, 18, 20] },
+    { id: "p-4", name: "Canvas Tote Bag", stock: 60, reorderThreshold: 20, weeklySales: [14, 13, 15, 12, 14, 13] },
+];

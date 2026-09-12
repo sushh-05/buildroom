@@ -43,3 +43,11 @@ export interface DisruptedBooking {
     alternatives: Itinerary[];
     resolved: boolean;
 }
+
+export interface Product {
+    id: string;
+    name: string;
+    stock: number;
+    reorderThreshold: number;
+    weeklySales: number[];
+}
