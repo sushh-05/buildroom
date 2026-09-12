@@ -113,3 +113,31 @@ export const seedInvoices: Invoice[] = [
     { id: "inv-3", client: "Northwind Foods", amount: 27500, dueDate: "2026-09-01", status: "Pending" },
     { id: "inv-4", client: "Vertex Auto Parts", amount: 63200, dueDate: "2026-07-28", status: "Paid" },
 ];
+
+import type { DisruptedBooking } from "../types";
+
+export const disruptedBookings: DisruptedBooking[] = [
+    {
+        id: "bk-1",
+        traveler: "Meera Nair",
+        originalRoute: "BOM → DXB, 14:20",
+        reason: "Flight cancelled",
+        resolved: false,
+        alternatives: [
+            { id: "alt-1", route: "BOM → DXB via AUH", departure: "16:45", price: 18200, connections: 1, rank: 0 },
+            { id: "alt-2", route: "BOM → DXB direct", departure: "21:10", price: 24500, connections: 0, rank: 0 },
+            { id: "alt-3", route: "BOM → DXB via DOH", departure: "23:30", price: 15800, connections: 1, rank: 0 },
+        ],
+    },
+    {
+        id: "bk-2",
+        traveler: "Arjun Kapoor",
+        originalRoute: "DEL → SIN, 09:00",
+        reason: "Aircraft swap — schedule shifted 6 hours",
+        resolved: false,
+        alternatives: [
+            { id: "alt-4", route: "DEL → SIN direct", departure: "11:30", price: 21200, connections: 0, rank: 0 },
+            { id: "alt-5", route: "DEL → SIN via KUL", departure: "13:00", price: 16900, connections: 1, rank: 0 },
+        ],
+    },
+];

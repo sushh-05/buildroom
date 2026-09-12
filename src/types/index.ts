@@ -25,3 +25,21 @@ export interface Invoice {
     dueDate: string;
     status: InvoiceStatus;
 }
+
+export interface Itinerary {
+    id: string;
+    route: string;
+    departure: string;
+    price: number;
+    connections: number;
+    rank: number;
+}
+
+export interface DisruptedBooking {
+    id: string;
+    traveler: string;
+    originalRoute: string;
+    reason: string;
+    alternatives: Itinerary[];
+    resolved: boolean;
+}
