@@ -109,9 +109,9 @@ All code was reviewed, run, and tested locally at each step before committing, a
 
 ## Three intentional differences from Outskill
 
-1. **Educational philosophy.** Outskill's positioning centers on cohort-based courses and instructor-led learning; Buildroom instead centers on solving one realistic business mission and shipping proof of work. This changes the entire information architecture — instead of a course catalog, the hero feature is an interactive Mission Explorer with embedded working previews.
+1. **Educational philosophy.** Outskill's positioning centers on cohort-based courses and instructor-led learning; Buildroom instead centers on solving one realistic business mission and shipping proof of work. This changes the entire information architecture - instead of a course catalog, the hero feature is an interactive Mission Explorer with embedded working previews.
 2. **Proof over credentials.** Where course platforms typically emphasize certificates and completion badges, Buildroom's "Proof, not certificates" section explicitly lists tangible artifacts (GitHub repo, live deployment, architecture note, recorded walkthrough) and deliberately avoids fabricated placement statistics or logo walls, since those weren't verifiable and would undercut the platform's own message about evidence over claims.
-3. **Interaction model.** Rather than static feature cards or a course-preview carousel, the core interaction is three functioning mini-applications embedded directly in the marketing page — a real invoice board, a real rebooking ranker, and a real inventory forecaster — so visitors experience a sample of the product rather than reading a description of it.
+3. **Interaction model.** Rather than static feature cards or a course-preview carousel, the core interaction is three functioning mini-applications embedded directly in the marketing page - a real invoice board, a real rebooking ranker, and a real inventory forecaster - so visitors experience a sample of the product rather than reading a description of it.
 
 ---
 
