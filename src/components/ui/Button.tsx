@@ -1,7 +1,7 @@
 import type { ButtonHTMLAttributes, ReactNode } from "react";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-    variant?: "primary" | "secondary";
+    variant?: "primary" | "secondary" | "inverse";
     children: ReactNode;
 }
 
@@ -18,6 +18,7 @@ export function Button({
         primary: "bg-[#171713] text-white",
         secondary:
             "border border-[#171713]/15 bg-transparent text-[#171713] hover:bg-[#171713]/5",
+        inverse: "bg-[#f3f0e8] text-[#171713] hover:bg-white",
     };
 
     return (
